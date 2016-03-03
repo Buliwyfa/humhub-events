@@ -1,0 +1,69 @@
+.event img {
+    max-width: 100%;
+}
+
+.main, .info {
+    padding: 20px;
+}
+
+.description {
+    text-align: justify;
+}
+
+.description img {
+    margin: 10px 0;
+}
+
+.main h1 {
+    font-size: 2.4em !important;
+    font-weight: bold !important;
+}
+
+.info img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 1px 1px 2px #999;
+}
+
+.info h2 {
+    color: #555;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.mapbox {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
+
+.map-container {
+    position: relative;
+    height: 200px;
+}
+
+.facebook {
+    background: #3b5998;
+    border-radius: 3px;
+    padding: 3px 5px;
+    color: #fff;
+}
+
+.facebook:hover {
+    color: #fff;
+    background: #6e8ccb;
+}
+
+.website {
+    background: #28b16f;
+    border-radius: 3px;
+    padding: 3px 5px;
+    color: #fff;
+}
+
+.website:hover {
+    color: #fff;
+    background: #5be472;
+}
