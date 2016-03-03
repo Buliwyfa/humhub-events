@@ -11,7 +11,9 @@ use humhub\modules\ponyevents\libs\MapBox;
     <?php foreach ($json as $event): ?>
         <div class="col-md-8">
             <div class="panel panel-default main">
-                <h1><?= $event->muName ?></h1>
+                <a href="http://bronies.fr/?/event/<?= $event->id ?>">
+                    <h1><?= $event->muName ?></h1>
+                </a>
 
                 <hr/>
 
@@ -35,7 +37,7 @@ use humhub\modules\ponyevents\libs\MapBox;
                     <p><b>Participants : <?= $event->participants ?></b></p>
                 </div>
 
-                <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="http://bronies.fr">bronies.fr</a></em>
+                <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="http://bronies.fr">bronies.fr</a>, ajoutez votre meet-up sur <a style="text-decoration: underline;" href="http://bronies.fr">bronies.fr</a></em>
             </div>
         </div>
 
