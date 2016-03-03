@@ -16,7 +16,7 @@ class Events extends Object
             'sortOrder' => 500,
             'url' => Url::to(['/ponyevents/events']),
             'icon' => '<i class="fa fa-map-marker"></i>',
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'ponyevents' && Yii::$app->controller->id == 'view')
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'ponyevents' && Yii::$app->controller->id == 'events')
         ]);
     }
 
