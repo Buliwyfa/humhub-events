@@ -22,7 +22,9 @@ use humhub\modules\ponyevents\libs\MapBox;
                 <hr/>
 
                 <div class="links">
-                    <p><a class="facebook" href="<?= $event->lien_facebook ?>">Lien Facebook <i class="fa fa-facebook"></i></a></p>
+                    <?php if (!empty($event->lien_facebook)): ?>
+                        <p><a class="facebook" href="<?= $event->lien_facebook ?>">Lien Facebook <i class="fa fa-facebook"></i></a></p>
+                    <?php endif ?>
                     <?php if (!empty($event->lien_site)): ?>
                         <p><a class="website" href="<?= $event->lien_site ?>">Lien du site <i class="fa fa-home"></i></a></p>
                     <?php endif ?>
