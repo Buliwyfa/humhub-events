@@ -34,7 +34,7 @@ use humhub\modules\ponyevents\libs\MapBox;
                 </div>
 
                 <div class="participants">
-                    <p><b>Participants : <?= $event->participants ?></b></p>
+                    <p><b>Participants : <?= $event->nb_participants ?></b></p>
                 </div>
 
                 <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="http://bronies.fr">bronies.fr</a>, ajoutez votre meet-up sur <a style="text-decoration: underline;" href="http://bronies.fr">bronies.fr</a></em>
