@@ -25,14 +25,14 @@ class EventsController extends Controller
         $cache->useApcu = true;
         $json = null;
 
-        if ($cache->exists('json')) {
+        /*if ($cache->exists('json')) {
             $json = $cache->get('json');
-        } else {
+        } else {*/
             $response = file_get_contents('http://www.bronies.fr/?/api');
             $json = json_decode($response);
 
             $cache->add('json', $json, 3600);
-        }
+        //}
 
         return $this->render('main', ['json' => $json]);
     }
