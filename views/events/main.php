@@ -34,7 +34,8 @@ use humhub\modules\ponyevents\libs\MapBox;
                 </div>
 
                 <div class="participants">
-                    <p><b>Participants : <?= $event->nb_participants ?></b></p>
+                    <p><i class="fa fa-users"></i> <?= $event->nb_participants ?></b> bronies participent <?php if ($event->nb_participants > 0): ?>!<?php else: ?>:(<?php endif ?></p>
+                    <p style="text-align: justify;"><b>Participants : </b><?php foreach ($event->participant_list as $brony) : ?><a href="<?= \Yii::getAlias('@web') ?>/u/<?= strtolower(urlencode($brony)) ?>"><em><i class="fa fa-at"></i><?= $brony ?></em></a> <?php endforeach ?></p>
                 </div>
 
                 <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="http://bronies.fr">bronies.fr</a>, ajoutez votre meet-up sur <a style="text-decoration: underline;" href="http://bronies.fr">bronies.fr</a></em>
