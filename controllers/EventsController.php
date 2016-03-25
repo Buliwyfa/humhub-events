@@ -28,7 +28,18 @@ class EventsController extends Controller
         if ($cache->exists('json')) {
             $json = $cache->get('json');
         } else {
-            $response = file_get_contents('http://www.bronies.fr/?/api');
+            $url = 'https://www.bronies.fr/?/api';
+
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_REFERER, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+            $response = curl_exec($curl);
+            curl_close($curl);
+
             $json = json_decode($response);
 
             $cache->add('json', $json, 3600);
