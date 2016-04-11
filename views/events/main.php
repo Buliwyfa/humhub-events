@@ -11,7 +11,7 @@ use humhub\modules\ponyevents\libs\MapBox;
     <?php foreach ($json as $event): ?>
         <div class="col-md-8">
             <div class="panel panel-default main">
-                <a href="http://bronies.fr/?/event/<?= $event->id ?>">
+                <a href="https://bronies.fr/?/event/<?= $event->id ?>">
                     <h1><?= $event->muName ?></h1>
                 </a>
 
@@ -38,13 +38,13 @@ use humhub\modules\ponyevents\libs\MapBox;
                     <p style="text-align: justify;"><b>Participants : </b><?php foreach ($event->participant_list as $brony) : ?><a href="<?= \Yii::getAlias('@web') ?>/u/<?= strtolower(urlencode($brony)) ?>"><em><i class="fa fa-at"></i><?= $brony ?></em></a> <?php endforeach ?></p>
                 </div>
 
-                <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="http://bronies.fr">bronies.fr</a>, ajoutez votre meet-up sur <a style="text-decoration: underline;" href="http://bronies.fr">bronies.fr</a></em>
+                <em>Créé le <?= \Yii::$app->formatter->asDate($event->date_creation, 'php:l d F à H:i') ?> sur <a href="https://bronies.fr">bronies.fr</a>, ajoutez votre meet-up sur <a style="text-decoration: underline;" href="https://bronies.fr">bronies.fr</a></em>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="panel panel-default info">
-                <img class="banner" src="http://bronies.fr/images/events/<?= $event->banner?>"/>
+                <img class="banner" src="https://bronies.fr/images/events/<?= $event->banner?>"/>
 
                 <h2>Meet up :</h2>
                 <em>Référencé par <?= $event->referencer ?> et organisé par <?= empty($event->organizer) ? 'N.A.' : $event->organizer ?></em>
